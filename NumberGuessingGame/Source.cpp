@@ -1,9 +1,14 @@
 #include <iostream>
+#include <cstdlib> 
+#include <ctime> 
 
 int main()
 {
 	int guess;
-	std::cout << "Enter your guess" << std::endl;
-	std::cin >> guess;
 	char input;
+	std::cout << "Hello user!" << std::endl;
+	std::cout << "Enter your number..." << std::endl;
+	std::cin >> guess;
+	
+	system("pause");
 }
