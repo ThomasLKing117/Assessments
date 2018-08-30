@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib> 
+#include <ctime> 
 
 int main()
 {
@@ -25,6 +26,7 @@ int main()
 		}
 		//Here I am telling the computer to generate a random number
 		{
+			srand(time(NULL));
 			guess = rand() % 100 + 1;
 		}
 		//This is where the user tells the computer whether or not its guess was to high, low, or equal to the users guess
@@ -67,11 +69,10 @@ int main()
 			std::cin >> input;
 
 			system("cls");
-
-			std::cout << "Thanks for playing!!!" << std::endl;
-			system("Pause");
 		}
 	}
+	std::cout << "Thanks for playing!!!" << std::endl;
+	system("Pause");
 	// This ends the game 
 	while (input == '-')
 	{
