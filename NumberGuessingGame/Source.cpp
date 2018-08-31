@@ -6,6 +6,7 @@ int main()
 {
 	// These are the variables im starting with
 	int guess;
+	int userNum;
 	char input;
 	// This is asking if you want to play
 	std::cout << "Press (+) to play game!" << std::endl;
@@ -20,6 +21,8 @@ int main()
 			std::cout << "Hello user, I want you to think of a number!" << std::endl;
 			std::cout << "The number must be between the numbers 1 - 100..." << std::endl;
 			std::cout << "I will then have the computer guess that number..." << std::endl;
+			std::cout << "Enter your number..." << std::endl;
+			std::cin >> userNum;
 
 			system("pause");
 			system("cls");
@@ -31,6 +34,7 @@ int main()
 		}
 		//This is where the user tells the computer whether or not its guess was to high, low, or equal to the users guess
 		{
+			std::cout << "Your number is, " << userNum << std::endl;
 			std::cout << "Computer guess, " << guess << std::endl;
 			std::cout << "Is the guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
 			std::cin >> input;
@@ -39,11 +43,21 @@ int main()
 			{
 				if (input == '<')
 				{
-
+					guess = rand() % userNum;
+					std::cout << "Your number is, " << userNum << std::endl;
+					std::cout << "Computer guess, " << guess << std::endl;
+					std::cout << "Is the guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
+					std::cin >> input;
+					system("cls");
 				}
 				else if (input == '>')
 				{
-
+					guess = rand() % userNum;
+					std::cout << "Your number is, " << userNum << std::endl;
+					std::cout << "Computer guess, " << guess << std::endl;
+					std::cout << "Is the guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
+					std::cin >> input;
+					system("cls");
 				}
 				else // This happens if the respones given by the user is invalid
 				{
