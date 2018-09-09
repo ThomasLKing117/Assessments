@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 
 int main()
 {
@@ -128,8 +129,11 @@ int main()
 		}
 		system("pause");
 		system("cls");
-		
-		std::cout << "Press (-) to end the game" << std::endl;
+
+		memset(&board, ' ', sizeof(board));
+
+		std::cout << "Enter (+) to play again" << std::endl;
+		std::cout << "Enter (-) to end the game" << std::endl;
 		std::cin >> input;
 
 		system("cls");
