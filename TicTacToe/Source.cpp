@@ -55,7 +55,7 @@ int main()
 			{
 				for (int k = 0; k <= 2; k++)
 				{
-					std::cout << "|_" << board[j][k] << "_|";
+					std::cout << "|~ " << board[j][k] << " ~|";
 
 					if (6 % (k + 3) == 1)
 					{
