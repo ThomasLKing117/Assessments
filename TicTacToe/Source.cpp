@@ -4,6 +4,7 @@ int main()
 {
 	char input = '+';
 	
+	// This tells you how to play
 	std::cout << "Welcome to Tic Tac Toe, this game requires 2 palyers\n";
 	std::cout << "The way this game works is you have a 3x3 grid that you play on\n";
 	std::cout << "The objective of the game is to match 3 of your tokens in a row \non the gird while the opposing player is trying to do the same\n\n";
@@ -12,7 +13,7 @@ int main()
 	
 	system("pause");
 	system("cls");
-
+	//This is an example of the board
 	std::cout << "This is an example of the board you will be playing on...\n\n";
 	
 	char exampleBoard[3][4] = { { '1', '2', '3', '\n' },{ '4', '5', '6', '\n' },{ '7', '8', '9', '\n' } };
@@ -38,6 +39,7 @@ int main()
 
 	while (input == '+')
 	{
+		//Variables
 		char board[3][4] = { {' ', ' ', ' ', '\n' }, {' ', ' ', ' ', '\n' }, {' ', ' ', ' ', '\n' } };
 		char playerToken;
 		int row;
@@ -45,9 +47,9 @@ int main()
 		char empty = ' ';
 		int turn = 0;
 
-	
 		while (turn < 9)
 		{
+			//this is the game board
 			for (int i = 0; i < 3; i++)
 			{
 				for (int j = 0; j < 4; j++)
@@ -60,7 +62,7 @@ int main()
 				}
 			}
 			std::cout << std::endl;
-
+			//this decides who's turn it is
 			if (turn % 2 == 0)
 			{
 				playerToken = 'x';
@@ -77,7 +79,7 @@ int main()
 				std::cin >> column;
 				std::cout << '\n';
 			}
-
+			//This preventa double peices
 			if (board[row][column] != empty)
 			{
 				std::cout << "This spot is already taken or does not exist...\n\n";
@@ -87,7 +89,7 @@ int main()
 			}
 
 			board[row][column] = playerToken;
-
+			//These are the win statments
 			if (board[0][0] == 'x' && board[0][1] == 'x' && board[0][2] == 'x')
 			{
 				system("cls");
@@ -219,7 +221,7 @@ int main()
 			}
 
 			turn++;
-
+			//This determines a tie
 			if (turn == 9)
 			{
 				std::cout << "You tied\n";
