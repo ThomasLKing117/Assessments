@@ -4,6 +4,7 @@
 
 int main()
 {
+	srand(time(NULL));
 	// These are the variables im starting with
 	int guess;
 	int userNum;
@@ -30,7 +31,6 @@ int main()
 		}
 		//Here I am telling the computer to generate a random number
 		{
-			srand(time(NULL));
 			guess = rand() % 100 + 1;
 		}
 		//This is where the user tells the computer whether or not its guess was to high, low, or equal to the users guess
