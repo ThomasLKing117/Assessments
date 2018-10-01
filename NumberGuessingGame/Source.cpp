@@ -4,18 +4,16 @@
 
 int main()
 {
-	srand(time(NULL));
 	// These are the variables im starting with
 	int guess;
 	int userNum;
 	char input;
-	char start;
 	// This is asking if you want to play
 	std::cout << "Press (+) to play game!" << std::endl;
 	std::cout << "Press (-) to leave..." << std::endl;
-	std::cin >> start;
+	std::cin >> input;
 	// This is the game its self
-	while (start == '+')
+	while (input == '+')
 	{
 		system("cls");
 		// Here I am telling the user about the game and how it works
@@ -31,6 +29,7 @@ int main()
 		}
 		//Here I am telling the computer to generate a random number
 		{
+			srand(time(NULL));
 			guess = rand() % 100 + 1;
 		}
 		//This is where the user tells the computer whether or not its guess was to high, low, or equal to the users guess
@@ -89,7 +88,7 @@ int main()
 	std::cout << "Thanks for playing!!!" << std::endl;
 	system("Pause");
 	// This ends the game 
-	while (start == '-')
+	while (input == '-')
 	{
 		return 0;
 	}
