@@ -31,7 +31,7 @@ int main()
 	std::cout << "\nThe way you place a token on the board will be by typing in the cooridnates\n";
 	std::cout << "The first row is 0, the second row is 1, and the third row is 2\n";
 	std::cout << "The first column is 0, the second column is 1, and the third column is 2\n\n";
-	std::cout << "For example if you wanted to a x where the 5 is you would have to type this in\n";
+	std::cout << "For example if you wanted a x where 5 is you would have to type this in\n";
 	std::cout << "1 1\n\n";
 	system("pause");
 	system("cls");
