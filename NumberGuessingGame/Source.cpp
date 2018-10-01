@@ -7,6 +7,8 @@ int main()
 	srand(time(NULL));
 	// These are the variables im starting with
 	int guess;
+	int min = 0;
+	int max = 0;
 	char input;
 	char start = '+';
 
@@ -37,17 +39,19 @@ int main()
 			{
 				if (input == '<')
 				{
-					guess = rand() % guess + 1;
+					max = guess;
+					guess = rand() % (max - min) + min;
 					std::cout << "Computer guess, " << guess << std::endl;
-					std::cout << "Is the guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
+					std::cout << "Is your number eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
 					std::cin >> input;
 					system("cls");
 				}
 				else if (input == '>')
 				{
-					guess = rand() % 100 + 1;
+					min = guess;
+					guess = rand() % (max - min) + min;
 					std::cout << "Computer guess, " << guess << std::endl;
-					std::cout << "Is the guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
+					std::cout << "Is your number guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
 					std::cin >> input;
 					system("cls");
 				}
