@@ -8,12 +8,13 @@ int main()
 	int guess;
 	int userNum;
 	char input;
+	char start;
 	// This is asking if you want to play
 	std::cout << "Press (+) to play game!" << std::endl;
 	std::cout << "Press (-) to leave..." << std::endl;
-	std::cin >> input;
+	std::cin >> start;
 	// This is the game its self
-	while (input == '+')
+	while (start == '+')
 	{
 		system("cls");
 		// Here I am telling the user about the game and how it works
@@ -88,7 +89,7 @@ int main()
 	std::cout << "Thanks for playing!!!" << std::endl;
 	system("Pause");
 	// This ends the game 
-	while (input == '-')
+	while (start == '-')
 	{
 		return 0;
 	}
