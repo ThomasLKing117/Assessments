@@ -8,8 +8,22 @@ int main()
 
 	while (input == '+')
 	{
+		char exampleBoard[3][4] = { { '1', '2', '3', '\n' },{ '4', '5', '6', '\n' },{ '7', '8', '9', '\n' } };
+		char board[3][4] = { {' ', ' ', ' ', '\n' }, {' ', ' ', ' ', '\n' }, {' ', ' ', ' ', '\n' } };
+		char playerChoice;
 
-		
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 4; j++)
+			{
+				std::cout << exampleBoard[i][j];
+				if (!(exampleBoard[i][j] == exampleBoard[2][3]))
+				{
+					std::cout << " ~ ";
+				}
+			}
+		}
+
 		system("pause");
 		system("cls");
 
