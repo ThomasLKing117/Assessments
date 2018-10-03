@@ -31,7 +31,7 @@ int main()
 		//This is where the user tells the computer whether or not its guess was to high, low, or equal to the users guess
 		{
 			std::cout << "Computer guess, " << guess << std::endl;
-			std::cout << "Is the guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
+			std::cout << "Is your number eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
 			std::cin >> input;
 			system("cls");
 
@@ -51,7 +51,7 @@ int main()
 					min = guess;
 					guess = rand() % (max - min) + min;
 					std::cout << "Computer guess, " << guess << std::endl;
-					std::cout << "Is your number guess eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
+					std::cout << "Is your number eqaul to(=), less than(<), or greater than(>), your number?" << std::endl;
 					std::cin >> input;
 					system("cls");
 				}
